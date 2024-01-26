@@ -3,7 +3,7 @@ import random
 
 def get_numbers_ticket(min, max, quantity):
     list=[]
-    if min<max:
+    if (min<max) and (1<min<1000) and (max<1000):
         while len(list)<(max-min):
             b=random.randint(min, max)
             if b not in list:
@@ -12,8 +12,8 @@ def get_numbers_ticket(min, max, quantity):
         d=sorted(c)
         return d
     else:
-        print('не вірно вказані дані: min має бути менше max')
+        print('не вірно вказані дані')
 
 
-lottery_numbers = get_numbers_ticket(5,50,6)
+lottery_numbers = get_numbers_ticket(5,1001,6)
 print("Ваші лотерейні числа:", lottery_numbers)
